@@ -29,6 +29,6 @@ class StringCalculatorTest < Minitest::Test
   end
 
   def test_add_with_custom_delimiter
-    assert_equal 4, @calculator.add("//;\n2;2")
+    assert_equal 12, @calculator.add("//;\n1;2;4;\n\n\n;0\n\n\n;5;0")
   end
 end
