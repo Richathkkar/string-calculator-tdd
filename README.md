@@ -8,6 +8,7 @@ Returns the sum of the integers.
 Supports new line delimiters.
 Handles multiple numbers separated by both commas and newlines.
 Supports custom delimiters.
+Ignore bigger number(more than 1000)
 
 Getting Started
 Follow these instructions to get the project running on your local machine.
