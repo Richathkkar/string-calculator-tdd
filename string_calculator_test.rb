@@ -100,7 +100,7 @@ class StringCalculatorTest < Minitest::Test
 
   # Delimiters mixed with newlines
   def test_add_with_delimiters_and_newlines
-    assert_equal 10, @calculator.add("//[*][%]\n1*2\n3%4")
+    assert_equal 10, @calculator.add("//[****][%]\n1****2\n3%4")
   end
 
   # Delimiters of different lengths
