@@ -39,4 +39,12 @@ class StringCalculatorTest < Minitest::Test
   def test_add_with_multiple_negetive_number
     assert_raises(RuntimeError, "negative numbers not allowed -2, -5") {@calculator.add("1,-2,3,-5")}
   end
+
+  def test_add_ignores_numbers_bigger_than_1000
+    assert_equal 7, @calculator.add('7,1001')
+  end
+
+  def test_add_with_custom_delimiter_and_bigger_number
+    assert_equal 20, @calculator.add("//;\n1;2;3;4;\n\n\n;0\n\n\n;5;0;1009;9974;5")
+  end
 end
