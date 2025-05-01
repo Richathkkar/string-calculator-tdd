@@ -19,4 +19,8 @@ class StringCalculatorTest < Minitest::Test
   def test_add__two_numbers
     assert_equal 6, @calculator.add('1,5')
   end
+
+  def test_add_with_newlines
+    assert_equal 7, @calculator.add("1\n2,4")
+  end
 end
