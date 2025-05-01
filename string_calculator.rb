@@ -14,6 +14,14 @@ class StringCalculator
 
 	    # Split by commas and sum up the numbers
 	    numbers = input.split(",")
-	    numbers.map(&:to_i).sum
+	    numbers = numbers.map(&:to_i)
+
+	    # Check for negative numbers and raise an exception
+	    negatives = numbers.select { |num| num < 0 }
+	    if negatives.any?
+	      raise "negative numbers not allowed #{negatives.join(', ')}"
+	    end
+
+	    numbers.sum
 	end
 end
