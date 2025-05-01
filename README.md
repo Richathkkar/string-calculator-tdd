@@ -10,6 +10,7 @@ Handles multiple numbers separated by both commas and newlines.
 Supports custom delimiters.
 Ignore bigger number(more than 1000)
 Support any length of delimiter.
+Throw exception if input is negative.
 
 Getting Started
 Follow these instructions to get the project running on your local machine.
