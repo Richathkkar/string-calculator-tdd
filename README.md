@@ -2,8 +2,11 @@
 A simple Ruby program that calculates string with some features:
 
 Features
-Handles string of comma-separated.
-Returns the sum of integers.
+
+Handles strings of comma-separated numbers.
+Returns the sum of the integers.
+Supports new line delimiters.
+Handles multiple numbers separated by both commas and newlines.
 
 Getting Started
 Follow these instructions to get the project running on your local machine.
