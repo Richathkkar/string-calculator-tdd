@@ -3,11 +3,15 @@ require 'minitest/autorun'
 require_relative 'string_calculator'
 
 class StringCalculatorTest < Minitest::Test
- def setup
-   @calculator = StringCalculator.new
- end
+  def setup
+    @calculator = StringCalculator.new
+  end
 
- def test_add_empty_string
-   assert_equal 0, @calculator.add("")
- end
+  def test_add_empty_string
+    assert_equal 0, @calculator.add("")
+  end
+
+  def test_add_single_number
+    assert_equal 5, @calculator.add("5")
+  end
 end
