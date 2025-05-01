@@ -81,3 +81,35 @@ Here are example usages of the add method and what they return:
 10. Negative Numbers Raise Exception
 @calculator.add("-1,2,-3")
 # => RuntimeError: "negative numbers not allowed -1, -3"
+
+11. Test for multiple delimiters
+@calculator.add("//[*][%]\n1*2%3")
+# => 6
+
+12. Test for delimiters with more than one character
+@calculator.add("//[***][%%]\n2***3%%5")
+# => 10
+
+13. Test for delimiters with special symbols
+@calculator.add("//[^^][$$]\n1^^2$$3")
+# => 6
+
+14. Test for delimiters containing numbers
+@calculator.add("//[d1][e2]\n1d12e23")
+# => 6
+
+15. Test for three different delimiters
+@calculator.add("//[+][!][@]\n5+5!2@3")
+# => 15
+
+16. Test for delimiters mixed with newlines
+@calculator.add("//[*][%]\n1*2\n3%4")
+# => 10
+
+17. Test for delimiters of different lengths
+@calculator.add("//[***][#][@@]\n2***3#4@@3")
+# => 12
+
+18. Test for mixed valid and large numbers
+@calculator.add("//[*][%]\n1*2%1001%3")
+# => 6
