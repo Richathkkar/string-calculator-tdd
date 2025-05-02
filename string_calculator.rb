@@ -23,16 +23,17 @@ class StringCalculator
 
 	private
 
+	# It can handle single delimiters or multiple delimiters enclosed in square brackets.
 	def process_delimiters(input)
      	if input.start_with?('//')
 	       # If custom delimiters are specified, check if there are multiple delimiters enclosed in square brackets
 	       if input.match?(%r{//\[(.*?)\]\n})
-	         input.scan(%r{\[(.*?)\]}).flatten # Extract all delimiters
+	         input.scan(%r{\[(.*?)\]}).flatten # Extract all custom delimiters enclosed in square brackets
 	       else
 	         [input.match(%r{//(.)\n})[1]] # Extract a single character delimiter if it's just one character
 	       end
      	else
-       		[','] # Default delimiter
+       		[','] # Default delimiter is a comma if no custom delimiter is specified
      	end
 	end
 end
